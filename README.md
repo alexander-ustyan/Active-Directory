@@ -21,13 +21,6 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Windows Server 2022
 - Windows 10 (21H2)
 
-<h2>High-Level Deployment and Configuration Steps</h2>
-
-- Step 1: Provision and configure Azure Virtual Machines for Windows Server and Windows 10.
-- Step 2: Install Active Directory Domain Services on the Windows Server 2022 VM.
-- Step 3: Promote the server to a Domain Controller and create a new domain.
-- Step 4: Join the Windows 10 client to the new domain and validate connectivity.
-
 <h2>Deployment and Configuration Steps</h2>
 
 <p>
@@ -40,17 +33,17 @@ This tutorial outlines the implementation of on-premises Active Directory within
 • Create a Resource Group (Set name and region).
 
 • Create a Virtual Network inside the Resource Group.
-
 • Create a Virtual Machine (VM1 - dc-1):
-
+<p>
+  <img src="https://i.imgur.com/VlOOQH5.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
+</p>
 • Image: Windows Server 2022 Datacenter
-
 • Specs: 2 vCPUs
-
 • Set username & password
-
 • Connect to VNet & review + create.
-
+<p>
+  <img src="https://i.imgur.com/mr8Ofex.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
+</p>
 2. Create a Second Virtual Machine
 
 • Create VM2 - client-1 in the same Resource Group:
