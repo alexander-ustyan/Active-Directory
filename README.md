@@ -3,7 +3,7 @@
 </p>
 
 <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines. <br/>
 
 <h2>Video Demonstration (coming soon)</h2>
 
@@ -27,6 +27,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
   Begin by logging into the Azure portal and creating a new resource group. Deploy two Virtual Machines: one running Windows Server 2022 to host Active Directory and another running Windows 10 for client testing. Configure the virtual network and subnet settings to ensure that both VMs can communicate, and enable Remote Desktop access on each machine.
   
   CHECKLIST:
+  
 • Create a Resource Group (Set name and region).
 • Create a Virtual Network inside the Resource Group.
 • Create a Virtual Machine (VM1 - dc-1):
@@ -34,27 +35,33 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <p>
   <img src="https://i.imgur.com/VlOOQH5.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
+
+Make sure to set the configurations:
 • Image: Windows Server 2022 Datacenter
 • Specs: 2 vCPUs
 • Set username & password
 • Connect to VNet & review + create.
+
 <p>
-  
   <img src="https://i.imgur.com/mr8Ofex.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
+
 2. Create a Second Virtual Machine
 • Create VM2 - client-1 in the same Resource Group:
   <img src="https://i.imgur.com/lEUurYD.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
+Make sure to set the configurations:
 • Image: Windows 10 Pro
 • Specs: 2 vCPUs
 • Set username & password
 • Connect to VNet & review + create.
+
 3. Configure Networking for DC-1
 • Open Azure Home → Go to VM dc-1 → Networking.
 • Go to Network Settings and disable NIC 1690.
 • Change IP settings:
 • Switch from Dynamic to Static.
+
 <p>
   <img src="https://i.imgur.com/vVN8ADF.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
@@ -62,14 +69,18 @@ This tutorial outlines the implementation of on-premises Active Directory within
 • Save the Private IP (should remain unchanged).
 4. Configure Firewall and Network Settings
 • Restart VM.
-• Disable Windows Firewall on dc-1:
+• Disable Windows Firewall on dc-1 by logging in through Microsoft Remote Desktop:
+
 <p>
   <img src="https://i.imgur.com/zK6ct4v.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
+
 • Open wf.msc → Turn OFF Firewall → Apply & OK.
+
 <p>
   <img src="https://i.imgur.com/pJZpJZZ.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
+
 • Set Client-1 DNS to DC-1’s Private IP:
 • Get dc-1 Private IP from Azure.
 • Go to VM2 (Client-1) Network Settings → Interface Card.
@@ -96,6 +107,10 @@ This tutorial outlines the implementation of on-premises Active Directory within
 </p>
 
 • Run: ipconfig /all to check DNS server settings.
+
+<p>
+  <img src="https://i.imgur.com/qUpRgei.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
+</p>
 
 6. Install Active Directory Domain Services
 
