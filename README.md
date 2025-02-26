@@ -28,9 +28,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
   
   CHECKLIST:
   
-• Create a Resource Group (Set name and region).
-• Create a Virtual Network inside the Resource Group.
-• Create a Virtual Machine (VM1 - dc-1):
+• Create a Resource Group (Set name and region). Create a Virtual Network inside the Resource Group. Create a Virtual Machine (VM1 - dc-1):
   
 <p>
   <img src="https://i.imgur.com/VlOOQH5.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
