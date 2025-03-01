@@ -211,21 +211,19 @@ Sign In with Domain User Credentials:
 • Click OK and restart Client-1.
 
 <p>
-  <img src="(https://i.imgur.com/Uhfm4sN.png)" height="80%" width="80%" alt="Client Domain Join and Validation"/>
+  <img src="https://i.imgur.com/Uhfm4sN.png" height="80%" width="80%" alt="Client Domain Join and Validation"/>
 </p>
 
 <p>
-  <img src="(https://i.imgur.com/Uhfm4sN.png)" height="80%" width="80%" alt="Client Domain Join and Validation"/>
+  <img src="https://i.imgur.com/Uhfm4sN.png" height="80%" width="80%" alt="Client Domain Join and Validation"/>
 </p>
 
 
 <strong> Verify Domain Enrollment </strong)>
 
 <p>
-  <img src="(https://i.imgur.com/iUIUadc.png)" height="80%" width="80%" alt="Client Domain Join and Validation"/>
+  <img src="https://i.imgur.com/iUIUadc.png" height="80%" width="80%" alt="Client Domain Join and Validation"/>
 </p>
-
-
 
 • Log back into dc-1.
 
@@ -235,9 +233,23 @@ Sign In with Domain User Credentials:
 
 • Verify that Client-1 is listed.
 
+<p>
+  <img src="https://i.imgur.com/ciEW0hh.png" height="80%" width="80%" alt="Client Domain Join and Validation"/>
+</p>
+
+
 • Right-click mydomain.com → Create a new OU named “Clients”.
 
+<p>
+  <img src="https://i.imgur.com/xCtxaZg.png" height="80%" width="80%" alt="Client Domain Join and Validation"/>
+</p>
+
 • Drag Client-1 into the Clients OU.
+
+<p>
+  <img src="https://i.imgur.com/IRDDbYk.png" height="80%" width="80%" alt="Client Domain Join and Validation"/>
+</p>
+
 
 <strong> Enable Remote Desktop Access for Domain Users: </strong>
 
@@ -250,6 +262,15 @@ Sign In with Domain User Credentials:
 • Enter Domain Users → Click OK.
 
 • Now, all domain users can log into Client-1.
+
+<p>
+  <img src="https://i.imgur.com/Pa94H6X.png" height="80%" width="80%" alt="Client Domain Join and Validation"/>
+</p>
+
+<p>
+  <img src="https://i.imgur.com/0Q9mEnE.png" height="80%" width="80%" alt="Client Domain Join and Validation"/>
+</p>
+
 
 <strong> Apply Group Policies via PowerShell: </strong>
 
