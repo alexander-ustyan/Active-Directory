@@ -135,13 +135,9 @@ Now we will Promote the Server to a Domain Controller:
 <br />
 
 <p>
-  <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="AD Installation and Promotion"/>
-</p>
-
-<p>
   <strong>Installing Active Directory Domain Services and Promoting the Server:</strong><br>
 
-   On the Windows Server 2022 VM, open Server Manager and use the Add Roles and Features Wizard to install the "Active Directory Domain Services" role along with any required features. Once installed, launch the Active Directory Domain Services Configuration Wizard to promote the server to a Domain Controller. Choose to create a new forest (for example, <code>mydomain.local</code>), configure DNS settings, and complete the wizard, which will automatically restart the server.
+  <strong> On the Windows Server 2022 VM, open Server Manager and use the Add Roles and Features Wizard to install the "Active Directory Domain Services" role along with any required features. Once installed, launch the Active Directory Domain Services Configuration Wizard to promote the server to a Domain Controller. Choose to create a new forest (for example, <code>mydomain.local</code>), configure DNS settings, and complete the wizard, which will automatically restart the server. </strong>
 
    <p>
   <img src="https://i.imgur.com/1nDZ4jI.png" height="80%" width="80%" alt="AD Installation and Promotion"/>
@@ -153,7 +149,7 @@ Sign In with Domain User Credentials:
 
 • Confirm that users can sign in with their domain credentials.
 
-9. Create Organizational Units (OU)
+<strong> Create Organizational Units (OU) </strong>
 
 • Open Active Directory Users and Computers on dc-1.
 
@@ -192,7 +188,8 @@ Sign In with Domain User Credentials:
   <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Client Domain Join and Validation"/>
 </p>
 <p>
-  <strong>Step 3: Joining Windows 10 Client to the Domain and Validating the Setup</strong><br>
+  <strong>Joining Windows 10 Client to the Domain and Validating the Setup:</strong><br>
+  
   On the Windows 10 VM, adjust the network settings to designate the Windows Server's IP address as the primary DNS server. Open the System Properties, select "Change settings" under Computer Name, and join the machine to the newly created domain by entering the domain name and appropriate credentials. After a reboot, verify the domain join by logging in with a domain account and using PowerShell (e.g., running <code>Get-ADUser</code>) to confirm connectivity with Active Directory.
   
 <strong> Join Client Machine (VM2) to the Domain: </strong>
@@ -203,11 +200,35 @@ Sign In with Domain User Credentials:
 
 • Under Computer Name → Click Change.
 
+<p>
+  <img src="https://i.imgur.com/hXn8rLA.png" height="80%" width="80%" alt="Client Domain Join and Validation"/>
+</p>
+
+<p>
+  <img src="https://i.imgur.com/P7aCcC3.png" height="80%" width="80%" alt="Client Domain Join and Validation"/>
+</p>
+
+
 • Select Domain, enter mydomain.com, and provide admin credentials.
 
 • Click OK and restart Client-1.
 
-<strong> Verify Domain Enrollment </strong>
+<p>
+  <img src="(https://i.imgur.com/Uhfm4sN.png)" height="80%" width="80%" alt="Client Domain Join and Validation"/>
+</p>
+
+<p>
+  <img src="(https://i.imgur.com/Uhfm4sN.png)" height="80%" width="80%" alt="Client Domain Join and Validation"/>
+</p>
+
+
+<strong> Verify Domain Enrollment </strong)>
+
+<p>
+  <img src="(https://i.imgur.com/iUIUadc.png)" height="80%" width="80%" alt="Client Domain Join and Validation"/>
+</p>
+
+
 
 • Log back into dc-1.
 
