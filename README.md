@@ -23,18 +23,18 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>Deployment and Configuration Steps</h2>
 <p>
-  <strong>Step 1: Provisioning Azure Virtual Machines and Network Configuration</strong><br>
-  Begin by logging into the Azure portal and creating a new resource group. Deploy two Virtual Machines: one running Windows Server 2022 to host Active Directory and another running Windows 10 for client testing. Configure the virtual network and subnet settings to ensure that both VMs can communicate, and enable Remote Desktop access on each machine.
+  <strong> Step 1: Provisioning Azure Virtual Machines and Network Configuration</strong><br>
+  Begin by logging into the Azure portal and creating a new resource group. Deploy two Virtual Machines: one running Windows Server 2022 to host Active Directory and another running Windows 10 for client testing. Configure the virtual network and subnet settings to ensure that both VMs can communicate, and enable Remote Desktop access on each machine. </strong> </p>
   
-  CHECKLIST:
-  
-• Create a Resource Group (Set name and region). Create a Virtual Network inside the Resource Group. Create a Virtual Machine (VM1 - dc-1):
+<h2> Start Here: </h2>
+
+<strong> Create a Resource Group (Set name and region). Create a Virtual Network inside the Resource Group. Create a Virtual Machine (VM1 - dc-1): </strong>
   
 <p>
   <img src="https://i.imgur.com/VlOOQH5.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
 
-Make sure to set the configurations:
+<strong> Make sure to set the configurations: </strong>
 • Image: Windows Server 2022 Datacenter
 • Specs: 2 vCPUs
 • Set username & password
@@ -44,17 +44,21 @@ Make sure to set the configurations:
   <img src="https://i.imgur.com/mr8Ofex.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
 
-2. Create a Second Virtual Machine
+<strong> Create a Second Virtual Machine: </strong>
+
 • Create VM2 - client-1 in the same Resource Group:
   <img src="https://i.imgur.com/lEUurYD.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
-Make sure to set the configurations:
+
+<strong> Make sure to set the configurations: </strong>
+
 • Image: Windows 10 Pro
 • Specs: 2 vCPUs
 • Set username & password
 • Connect to VNet & review + create.
 
-3. Configure Networking for DC-1
+<strong> Configure Networking for DC-1: </strong>
+
 • Open Azure Home → Go to VM dc-1 → Networking.
 • Go to Network Settings and disable NIC 1690.
 • Change IP settings:
