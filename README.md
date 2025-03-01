@@ -185,9 +185,6 @@ Sign In with Domain User Credentials:
 <br />
 
 <p>
-  <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Client Domain Join and Validation"/>
-</p>
-<p>
   <strong>Joining Windows 10 Client to the Domain and Validating the Setup:</strong><br>
   
   On the Windows 10 VM, adjust the network settings to designate the Windows Server's IP address as the primary DNS server. Open the System Properties, select "Change settings" under Computer Name, and join the machine to the newly created domain by entering the domain name and appropriate credentials. After a reboot, verify the domain join by logging in with a domain account and using PowerShell (e.g., running <code>Get-ADUser</code>) to confirm connectivity with Active Directory.
