@@ -254,3 +254,6 @@ Sign In with Domain User Credentials:
 <br
 
 <h1>And just like that, Active Directory is ready to use!</h1>
+
+<img src="https://i.imgur.com/pIcJK4D.png" height="80%" width="80%" alt="Client Domain Join and Validation"/>
+
