@@ -116,19 +116,7 @@ Now we are going to Install Active Directory Domain Services:
 
 Now we will Promote the Server to a Domain Controller:
 
-• In dc-1, open Server Manager and click the flag.
-
-• Promote the server to Domain Controller:
-
-• Set up a new forest.
-
-• Enter a domain name (mydomain.com).
-
-• Set a password.
-
-• Uncheck “Create DNS” and proceed.
-
-• System will now auto-restart.
+• In dc-1, open Server Manager and click the flag → Promote the server to Domain Controller: → Set up a new forest →Enter a domain name (mydomain.com) → Set a password → Uncheck “Create DNS” and proceed → System will now auto-restart.
 
 </p>
 
@@ -165,11 +153,7 @@ Sign In with Domain User Credentials:
 
 <strong> Create and Assign Users: </strong>
 
-• Right-click Admins or Users OU → New → User.
-
-• Enter username & password.
-
-• Right-click the user account → Properties → Member of → Add to “Domain Admins” (if admin privileges are needed).
+• Right-click Admins or Users OU → New → User → Enter username & password → Right-click the user account → Properties → Member of → Add to “Domain Admins” (if admin privileges are needed).
 
 <p>
   <img src="https://i.imgur.com/toOhTSN.png" height="80%" width="80%" alt="AD Installation and Promotion"/>
@@ -248,15 +232,7 @@ Sign In with Domain User Credentials:
 
 <strong> Enable Remote Desktop Access for Domain Users: </strong>
 
-• Log into Client-1 as user.mydomain.com.
-
-• Open System Properties → Remote Desktop.
-
-• Navigate to User Accounts → Select Users → Add.
-
-• Enter Domain Users → Click OK.
-
-• Now, all domain users can log into Client-1.
+• Log into Client-1 as user.mydomain.com → Open System Properties → Remote Desktop → Navigate to User Accounts → Select Users → Add → Enter Domain Users → Click OK → Now, all domain users can log into Client-1.
 
 <p>
   <img src="https://i.imgur.com/Pa94H6X.png" height="80%" width="80%" alt="Client Domain Join and Validation"/>
@@ -276,3 +252,5 @@ Sign In with Domain User Credentials:
 • Paste and execute any required PowerShell scripts for automation, security, or user/group policies.
 </p>
 <br
+
+<h1>And just like that, Active Directory is ready to use!</h1>
