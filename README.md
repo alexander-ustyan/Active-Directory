@@ -28,13 +28,13 @@ This tutorial outlines the implementation of on-premises Active Directory within
   
 <h2> Start Here: </h2>
 
-<strong> Create a Resource Group (Set name and region). Create a Virtual Network inside the Resource Group. Create a Virtual Machine (VM1 - dc-1): </strong>
+<strong> First 3 Steps: 1. Create a Resource Group (Set name and region) 2. Create a Virtual Network inside the Resource Group 3. Create a Virtual Machine (VM1 - dc-1): </strong>
   
 <p>
   <img src="https://i.imgur.com/VlOOQH5.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
 
-<strong> Make sure to set the configurations: </strong>
+<strong> Make sure to set the configurations for the (DC-1) VM like this: </strong>
 • Image: Windows Server 2022 Datacenter
 • Specs: 2 vCPUs
 • Set username & password
