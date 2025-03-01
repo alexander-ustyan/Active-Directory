@@ -45,10 +45,9 @@ This tutorial outlines the implementation of on-premises Active Directory within
 </p>
 
 <strong> Create a Second Virtual Machine: </strong>
-
 • Create VM2 - client-1 in the same Resource Group:
+
   <img src="https://i.imgur.com/lEUurYD.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
-</p>
 
 <strong> Make sure to set the configurations: </strong>
 
