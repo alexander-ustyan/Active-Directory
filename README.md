@@ -122,11 +122,10 @@ Now we are going to Install Active Directory Domain Services:
 
 • Enable Add Feature → Check Restart if required → Install.
 
-
 <p>
   <img src="https://i.imgur.com/uRZOI2V.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
-
+<fill> 
 <p>
   <img src="https://i.imgur.com/noJ5Aoe.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
@@ -144,10 +143,6 @@ Now we will Promote the Server to a Domain Controller:
 • Set a password.
 
 • Uncheck “Create DNS” and proceed.
-
-<p>
-  <img src="https://i.imgur.com/Y0RKVc5.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
-</p>
 
 • System will now auto-restart.
 
