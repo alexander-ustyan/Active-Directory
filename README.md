@@ -214,11 +214,6 @@ Sign In with Domain User Credentials:
   <img src="https://i.imgur.com/Uhfm4sN.png" height="80%" width="80%" alt="Client Domain Join and Validation"/>
 </p>
 
-<p>
-  <img src="https://i.imgur.com/Uhfm4sN.png" height="80%" width="80%" alt="Client Domain Join and Validation"/>
-</p>
-
-
 <strong> Verify Domain Enrollment </strong)>
 
 <p>
