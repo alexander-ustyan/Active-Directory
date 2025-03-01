@@ -125,7 +125,7 @@ Now we are going to Install Active Directory Domain Services:
 <p>
   <img src="https://i.imgur.com/uRZOI2V.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
-<fill> 
+
 <p>
   <img src="https://i.imgur.com/noJ5Aoe.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
