@@ -110,17 +110,28 @@ Make sure to set the configurations:
   <img src="https://i.imgur.com/qUpRgei.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
 
-6. Install Active Directory Domain Services
+Now we are going to Install Active Directory Domain Services:
 
-• Log into dc-1.
+• Log into dc-1, and open Server Manager → Add Roles & Features.
 
-• Open Server Manager → Add Roles & Features.
+<p>
+  <img src="https://i.imgur.com/7OMa4i9.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
+</p>
 
 • Select dc-1 and install Active Directory Domain Services.
 
 • Enable Add Feature → Check Restart if required → Install.
 
-7. Promote Server to Domain Controller
+
+<p>
+  <img src="https://i.imgur.com/uRZOI2V.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
+</p>
+
+<p>
+  <img src="https://i.imgur.com/noJ5Aoe.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
+</p>
+
+Now we will Promote the Server to a Domain Controller:
 
 • In dc-1, open Server Manager and click the flag.
 
@@ -134,19 +145,30 @@ Make sure to set the configurations:
 
 • Uncheck “Create DNS” and proceed.
 
-• System will auto-restart.
+<p>
+  <img src="https://i.imgur.com/Y0RKVc5.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
+
+• System will now auto-restart.
+
+</p>
+
 <br />
 
 <p>
   <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="AD Installation and Promotion"/>
 </p>
+
 <p>
-  <strong>Step 2: Installing Active Directory Domain Services and Promoting the Server</strong><br>
+  <strong>Installing Active Directory Domain Services and Promoting the Server:</strong><br>
 
    On the Windows Server 2022 VM, open Server Manager and use the Add Roles and Features Wizard to install the "Active Directory Domain Services" role along with any required features. Once installed, launch the Active Directory Domain Services Configuration Wizard to promote the server to a Domain Controller. Choose to create a new forest (for example, <code>mydomain.local</code>), configure DNS settings, and complete the wizard, which will automatically restart the server.
+
+   <p>
+  <img src="https://i.imgur.com/1nDZ4jI.png" height="80%" width="80%" alt="AD Installation and Promotion"/>
+</p>
   
-  8. Sign In with Domain User Credentials
+Sign In with Domain User Credentials:
 
 • Use mydomain.com\labuser and password to log in to dc-1.
 
@@ -160,9 +182,13 @@ Make sure to set the configurations:
 
 • Right-click the domain → Select New → Organizational Unit (OU).
 
+<p>
+  <img src="https://i.imgur.com/S8YZZjq.png" height="80%" width="80%" alt="AD Installation and Promotion"/>
+</p>
+
 • Name it accordingly (e.g., Employees, Admins, Clients).
 
-10. Create and Assign Users
+<strong> Create and Assign Users: </strong>
 
 • Right-click Admins or Users OU → New → User.
 
@@ -170,7 +196,11 @@ Make sure to set the configurations:
 
 • Right-click the user account → Properties → Member of → Add to “Domain Admins” (if admin privileges are needed).
 
-11. Assign User Roles
+<p>
+  <img src="https://i.imgur.com/toOhTSN.png" height="80%" width="80%" alt="AD Installation and Promotion"/>
+</p>
+
+<STRONG> Assign User Roles: </strong>
 
 • Log out of dc-1 and log back in as the created user.
 
