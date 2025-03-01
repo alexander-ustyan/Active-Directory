@@ -24,7 +24,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h2> Start Here: </h2>
 
 <strong> First Steps: 1. Create a Resource Group (Set name and region) 2. Create a Virtual Network inside the Resource Group 3. Create a Virtual Machine (VM1 - dc-1): 
-(Begin by logging into the Azure portal and creating a new resource group. Deploy two Virtual Machines: one running Windows Server 2022 to host Active Directory and another running Windows 10 for client testing. Configure the virtual network and subnet settings to ensure that both VMs can communicate, and enable Remote Desktop access on each machine) </strong>
+GENERAL START OVERVIEW: (Begin by logging into the Azure portal and creating a new resource group. Deploy two Virtual Machines: one running Windows Server 2022 to host Active Directory and another running Windows 10 for client testing. Configure the virtual network and subnet settings to ensure that both VMs can communicate, and enable Remote Desktop access on each machine) </strong>
   
 <p>
   <img src="https://i.imgur.com/VlOOQH5.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
@@ -45,7 +45,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
   <img src="https://i.imgur.com/lEUurYD.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 
-<strong> Make sure to set the configurations: </strong>
+<strong> Make sure to set the configurations for VM2 (Client-1) like this: </strong>
 
 • Image: Windows 10 Pro
 • Specs: 2 vCPUs
@@ -58,15 +58,16 @@ This tutorial outlines the implementation of on-premises Active Directory within
 • Go to Network Settings and disable NIC 1690.
 • Change IP settings:
 • Switch from Dynamic to Static.
+• Restart VM through Azure Portal.
+• CTRL + C (Save the Private IP/should remain unchanged)
 
 <p>
   <img src="https://i.imgur.com/vVN8ADF.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
 
-• Save the Private IP (should remain unchanged).
-4. Configure Firewall and Network Settings
-• Restart VM.
-• Disable Windows Firewall on dc-1 by logging in through Microsoft Remote Desktop:
+<Strong> Configuring Firewall and Network Settings: </strong> 
+
+• Disable Windows Firewall on dc-1 by logging into DC-1 through Microsoft Remote Desktop:
 
 <p>
   <img src="https://i.imgur.com/zK6ct4v.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
