@@ -23,18 +23,14 @@ This tutorial outlines the implementation of on-premises Active Directory within
   
 <h2> Start Here: </h2>
 
-<strong> First Steps: 1. Create a Resource Group (Set name and region) 2. Create a Virtual Network inside the Resource Group 3. Create a Virtual Machine (VM1 - dc-1): 
-GENERAL START OVERVIEW: (Begin by logging into the Azure portal and creating a new resource group. Deploy two Virtual Machines: one running Windows Server 2022 to host Active Directory and another running Windows 10 for client testing. Configure the virtual network and subnet settings to ensure that both VMs can communicate, and enable Remote Desktop access on each machine) </strong>
+<strong> Begin by logging into the Azure portal and creating a new resource group. Deploy two Virtual Machines: one running Windows Server 2022 to host Active Directory and another running Windows 10 for client testing. Configure the virtual network and subnet settings to ensure that both VMs can communicate, and enable Remote Desktop access on each machine. </strong>
   
 <p>
   <img src="https://i.imgur.com/VlOOQH5.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
 
 <strong> Make sure to set the configurations for the (DC-1) VM like this: </strong>
-• Image: Windows Server 2022 Datacenter
-• Specs: 2 vCPUs
-• Set username & password
-• Connect to VNet & review + create.
+• Image: Windows Server 2022 Datacenter → Specs: 2 vCPUs → Set username & password → Connect to VNet & review + create.
 
 <p>
   <img src="https://i.imgur.com/mr8Ofex.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
@@ -47,17 +43,11 @@ GENERAL START OVERVIEW: (Begin by logging into the Azure portal and creating a n
 
 <strong> Make sure to set the configurations for VM2 (Client-1) like this: </strong>
 
-• Image: Windows 10 Pro
-• Specs: 2 vCPUs
-• Set username & password
-• Connect to VNet & review + create.
+• Image: Windows 10 Pro → Specs: 2 vCPUs →Set username & password → Connect to VNet & review + create.
 
 <strong> Configure Networking for DC-1: </strong>
 
-• Open Azure Home → Go to VM dc-1 → Networking.
-• Go to Network Settings and disable NIC 1690.
-• Change IP settings:
-• Switch from Dynamic to Static.
+• Open Azure Home → Go to VM dc-1 → Networking. → Go to Network Settings and disable NIC 1690. → Change IP settings: → Switch from Dynamic to Static.
 • Restart VM through Azure Portal.
 • CTRL + C (Save the Private IP/should remain unchanged)
 
@@ -79,10 +69,7 @@ GENERAL START OVERVIEW: (Begin by logging into the Azure portal and creating a n
   <img src="https://i.imgur.com/pJZpJZZ.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
 
-• Set Client-1 DNS to DC-1’s Private IP:
-• Get dc-1 Private IP from Azure.
-• Go to VM2 (Client-1) Network Settings → Interface Card.
-• Change DNS Servers → Custom → Paste dc-1 Private IP.
+• Set Client-1 DNS to DC-1’s Private IP: → Get dc-1 Private IP from Azure → Go to VM2 (Client-1) Network Settings → Interface Card → Change DNS Servers → Custom → Paste dc-1 Private IP.
 
 <p>
   <img src="https://i.imgur.com/Wl9iODY.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
@@ -94,7 +81,7 @@ GENERAL START OVERVIEW: (Begin by logging into the Azure portal and creating a n
   <img src="https://i.imgur.com/tZFML4A.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
 
-5. Test Connection
+Now we will Test Connection!
 • Log in to Client-1.
 • Open PowerShell and test connectivity:
 • ping 10.0.0.4 (Private IP of dc-1).
