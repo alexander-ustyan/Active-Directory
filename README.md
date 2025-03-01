@@ -81,11 +81,8 @@ This tutorial outlines the implementation of on-premises Active Directory within
   <img src="https://i.imgur.com/tZFML4A.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
 
-Now we will Test Connection!
-• Log in to Client-1.
-• Open PowerShell and test connectivity:
-• ping 10.0.0.4 (Private IP of dc-1).
-• Ensure the ping succeeds.
+<strong> Now we will Test Connection! </strong>
+• Log in to Client-1 → Open PowerShell and test connectivity → ping 10.0.0.4 (Private IP of dc-1) → Ensure the ping succeeds.
 
 <p>
   <img src="https://i.imgur.com/IiPHdQu.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
@@ -99,7 +96,7 @@ Now we will Test Connection!
 
 Now we are going to Install Active Directory Domain Services:
 
-• Log into dc-1, and open Server Manager → Add Roles & Features.
+• Log into dc-1 → and open Server Manager → Add Roles & Features.
 
 <p>
   <img src="https://i.imgur.com/7OMa4i9.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
@@ -112,7 +109,7 @@ Now we are going to Install Active Directory Domain Services:
 <p>
   <img src="https://i.imgur.com/uRZOI2V.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
-
+:)
 <p>
   <img src="https://i.imgur.com/noJ5Aoe.png" height="80%" width="80%" alt="Azure VM Provisioning"/>
 </p>
@@ -198,7 +195,7 @@ Sign In with Domain User Credentials:
   <strong>Step 3: Joining Windows 10 Client to the Domain and Validating the Setup</strong><br>
   On the Windows 10 VM, adjust the network settings to designate the Windows Server's IP address as the primary DNS server. Open the System Properties, select "Change settings" under Computer Name, and join the machine to the newly created domain by entering the domain name and appropriate credentials. After a reboot, verify the domain join by logging in with a domain account and using PowerShell (e.g., running <code>Get-ADUser</code>) to confirm connectivity with Active Directory.
   
-  12. Join Client Machine (VM2) to the Domain
+<strong> Join Client Machine (VM2) to the Domain: </strong>
 
 • Log into Client-1 (VM2).
 
@@ -210,7 +207,7 @@ Sign In with Domain User Credentials:
 
 • Click OK and restart Client-1.
 
-Verify Domain Enrollment
+<strong> Verify Domain Enrollment </strong>
 
 • Log back into dc-1.
 
@@ -224,7 +221,7 @@ Verify Domain Enrollment
 
 • Drag Client-1 into the Clients OU.
 
-14. Enable Remote Desktop Access for Domain Users
+<strong> Enable Remote Desktop Access for Domain Users: </strong>
 
 • Log into Client-1 as user.mydomain.com.
 
@@ -236,7 +233,7 @@ Verify Domain Enrollment
 
 • Now, all domain users can log into Client-1.
 
-15. Apply Group Policies via PowerShell
+<strong> Apply Group Policies via PowerShell: </strong>
 
 • Log into dc-1 as a domain admin (user.domain.com (admin)).
 
