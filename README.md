@@ -223,7 +223,7 @@ Sign In with Domain User Credentials:
 
 • Click OK and restart Client-1.
 
-13. Verify Domain Enrollment
+Verify Domain Enrollment
 
 • Log back into dc-1.
 
